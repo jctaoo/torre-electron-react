@@ -4,5 +4,11 @@
   "description": "a template for electron with react",
   "main": "index.js",
   "author": "junso",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cfonts": "^2.4.2"
+  },
+  "devDependencies": {
+    "electron": "^4.1.1"
+  }
 }
