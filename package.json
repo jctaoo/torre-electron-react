@@ -1,0 +1,8 @@
+{
+  "name": "torre-electron-react",
+  "version": "0.0.1",
+  "description": "a template for electron with react",
+  "main": "index.js",
+  "author": "junso",
+  "license": "MIT"
+}
