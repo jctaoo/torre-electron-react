@@ -11,14 +11,26 @@ const rendererConfig = {
     contentBase: '../dist',
     port: 5000,
     hot: true,
+    quiet: true,
   } : undefined,
-  entry: path.join(__dirname, '../src/renderer/index.js'),
+  entry: path.join(__dirname, '../src/renderer/index.jsx'),
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, '../dist/renderer')
+    path: path.join(__dirname, '../dist/renderer'),
   },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader',
+          options: {
+            formatter: require('eslint-friendly-formatter')
+          }
+        }
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
