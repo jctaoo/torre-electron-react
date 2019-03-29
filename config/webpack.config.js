@@ -1,18 +1,20 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  devtool: 'inline-source-map',
+  devtool: process.env.NODE_ENV === 'development' ? 'inline-source-map' : undefined,
   devServer: process.env.NODE_ENV === 'development' ? {
-    contentBase: './dist',
-    port: 3000
+    contentBase: '../dist',
+    port: 3000,
+    hot: true,
   } : undefined,
-  entry: './src/renderer/index.js',
+  entry: path.join(__dirname, '../src/renderer/index.js'),
   output: {
     filename: 'bundle.[hash].js',
-    path: path.join(__dirname, '/dist/renderer')
+    path: path.join(__dirname, '../dist/renderer')
   },
   module: {
     rules: [
@@ -32,7 +34,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/renderer/index.html'
+      template: path.join(__dirname, '../src/renderer/index.html'),
     }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ]
 };
