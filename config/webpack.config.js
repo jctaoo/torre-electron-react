@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+const rendererConfig = {
   mode: process.env.NODE_ENV,
   devtool: process.env.NODE_ENV === 'development' ? 'inline-source-map' : undefined,
   devServer: process.env.NODE_ENV === 'development' ? {
@@ -14,7 +14,7 @@ module.exports = {
   } : undefined,
   entry: path.join(__dirname, '../src/renderer/index.js'),
   output: {
-    filename: 'bundle.[hash].js',
+    filename: '[name].js',
     path: path.join(__dirname, '../dist/renderer')
   },
   module: {
@@ -37,7 +37,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../src/renderer/index.html'),
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ]
 };
+
+if (process.env.NODE_ENV === 'development') {
+  rendererConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
+}
+
+module.exports = rendererConfig;

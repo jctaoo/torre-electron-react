@@ -25,8 +25,8 @@ let mainConfig = {
     ]
   },
   node: {
-    __dirname: process.env.NODE_ENV !== 'production',
-    __filename: process.env.NODE_ENV !== 'production'
+    __dirname: false,
+    __filename: false,
   },
   output: {
     filename: '[name].js',

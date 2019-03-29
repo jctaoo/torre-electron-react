@@ -7,7 +7,7 @@ const path = require('path');
 let electronProcess = null;
 
 async function startRenderer() {
-  const config = require('../config/webpack.config.js');
+  const config = require('../config/webpack.config');
   config.mode = 'development';
   const options = {
     contentBase: './dist',
