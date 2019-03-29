@@ -6,8 +6,7 @@
   "author": "junso",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development electron ./src/main/main.js",
-    "dev": "NODE_ENV=development node ./script/dev.js"
+    "dev": "NODE_ENV=development node ./script/dev.js",
   },
   "dependencies": {
     "react": "^16.8.5",
@@ -25,6 +24,8 @@
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
     "electron": "^4.1.1",
+    "electron-debug": "^2.1.0",
+    "electron-devtools-installer": "^2.2.4",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",

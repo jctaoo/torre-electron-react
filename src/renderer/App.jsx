@@ -10,6 +10,7 @@ export default () => {
       <h1 style={{color: 'red'}}>{count}</h1>
       <button onClick={() => {setCount(count + 1)}}>+</button>
       <button onClick={() => {setCount(count - 1)}}>-</button>
+      <h1>I like a cute girl called wyj</h1>
     </>
   )
 };

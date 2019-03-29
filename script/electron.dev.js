@@ -1,14 +1,10 @@
-require('electron-debug')({ showDevTools: true })
+const electronDebug = require('electron-debug');
+const {default: installExtension, REACT_DEVELOPER_TOOLS, REACT_PERF, REDUX_DEVTOOLS} = require('electron-devtools-installer');
 
-// Install `vue-devtools`
+console.log(process.argv);
 require('electron').app.on('ready', () => {
-  let installExtension = require('electron-devtools-installer')
-  installExtension.default(installExtension.VUEJS_DEVTOOLS)
-    .then(() => {})
-    .catch(err => {
-      console.log('Unable to install `vue-devtools`: \n', err)
-    })
-})
+  installExtension(REACT_DEVELOPER_TOOLS);
+});
 
-// Require `main` process to boot app
-require('./index')
+installExtension().then();
+require('../dist/main/main');
