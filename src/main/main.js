@@ -3,8 +3,8 @@ const path = require('path');
 
 let mainWindow;
 const url = process.env.NODE_ENV === 'development' ?
-  'http://localhost:8080' :
-  'file://' + path.join(__dirname, '../renderer/default.html');
+  'http://localhost:5000' :
+  'file://' + path.join(__dirname, '../renderer/index.html');
 
 function createWindow() {
   /**

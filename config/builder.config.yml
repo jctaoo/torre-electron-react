@@ -1,0 +1,8 @@
+productName: torre-electron-react
+appId: fun.junso.bunuelo.torre.electron.react
+copyright: junso
+directories:
+  output: build
+mac:
+  icon: ../build/icon/icon.ico
+
