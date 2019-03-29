@@ -1,10 +1,10 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 let mainWindow;
-const url = process.env.NODE_ENV === 'development' ?
-  'http://localhost:5000' :
-  'file://' + path.join(__dirname, '../renderer/index.html');
+const url = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:5000'
+  : `file://${path.join(__dirname, '../renderer/index.html')}`;
 
 function createWindow() {
   /**
@@ -43,4 +43,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
