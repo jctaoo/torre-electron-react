@@ -32,18 +32,28 @@ const rendererConfig = {
         }
       },
       {
+        test: /\.ts[x]?$/,
+        loader: "awesome-typescript-loader",
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
       {
+        enforce: "pre",
+        test: /\.ts[x]$/,
+        loader: "source-map-loader"
+      },
+      {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       }
     ]
   },
-  resolve:{
-    extensions:['.js','.css','.jsx']
+  resolve: {
+    extensions: ['.js', '.css', '.jsx', 'ts', 'tsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
