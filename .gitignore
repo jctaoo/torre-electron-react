@@ -4,3 +4,4 @@ dist
 build
 !build/icon/*
 .DS_Store
+.vscode
