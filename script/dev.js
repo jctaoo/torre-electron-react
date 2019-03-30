@@ -46,7 +46,7 @@ async function startMain() {
 function startElectron() {
   const args = [
     '--inspect=5858',
-    path.join(__dirname, '../dist/main/main.js'),
+    path.join(__dirname, 'electron.dev.js'),
   ];
 
   electronProcess = spawn(electron, args);

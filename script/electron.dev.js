@@ -4,7 +4,9 @@ const {default: installExtension, REACT_DEVELOPER_TOOLS, REACT_PERF, REDUX_DEVTO
 console.log(process.argv);
 require('electron').app.on('ready', () => {
   installExtension(REACT_DEVELOPER_TOOLS);
+  installExtension(REACT_PERF);
+  installExtension(REDUX_DEVTOOLS);
 });
+electronDebug({ devtool: true });
 
-installExtension().then();
 require('../dist/main/main');
