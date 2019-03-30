@@ -1,6 +1,6 @@
 {
   "name": "torre-electron-react",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "a template for electron with react",
   "main": "dist/main/main.js",
   "author": "junso",
