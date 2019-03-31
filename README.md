@@ -10,7 +10,7 @@
 - Be sure that you familiar with [Electron](https://electronjs.org/) and [React](https://reactjs.org/)
 - To download torre-electron-react, run:
 ``` bash
-weget https://github.com/hello-acuario/torre-electron-react/archive/release-v1.0.0.zip && unzip torre-electron-react-release-v1.0.0.zip -d '{your app name}'
+curl https://github.com/hello-acuario/torre-electron-react/archive/release-v1.0.0.zip && unzip torre-electron-react-release-v1.0.0.zip -d '{your app name}'
 ```
 - Then, you can open your workplaces and begine develop your app.
 ``` bash
