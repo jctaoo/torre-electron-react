@@ -31,7 +31,7 @@ It will compile your code by [webpack](https://webpack.js.org/ "webpack offcial 
     - config: Webpack and electron-builder's configure here.
     - script: Npm scripts will run javascript files in it. You needn't care about everyting in it.
 
-- Begain develop
+- Began develop
 
     - Now, you have a better understanding of torre-electron-react. 🍔
     - You can write react code in src/renderer. There is some template code and they are easy to understand.
