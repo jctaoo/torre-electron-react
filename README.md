@@ -1,3 +1,5 @@
+## Now is 2021, the new generate of front-end is came. Anyway, this repo is archived, here is some alternative you may like:
+
 <p align="center">
     <img src="https://bunuelo.oss-cn-shanghai.aliyuncs.com/torre-electron-react/torre-electron-react.png?x-oss-process=image/resize,w_200" alt="torre-electron-react logo"/>
     <center>
